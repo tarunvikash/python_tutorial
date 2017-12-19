@@ -1,1 +1,19 @@
+= Float, Decimal and Fraction.
+
+** Need a detailed study of Math Built in function.
+----
+>>> from decimal import Decimal
+>>> tax_rate = Decimal('7.25')/Decimal(100)
+>>> purchase_amount = Decimal('2.95')
+>>> tax_rate * purchase_amount
+Decimal('0.213875')
+>>> penny = Decimal('0.01')
+>>> (19/55)*(155/19)
+2.818181818181818
+>>> answer = (19/55)*(155/19)
+>>> round(answer, 3)
+2.818
+>>>
+----
+
 
