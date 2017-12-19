@@ -1,0 +1,28 @@
+= Choosing between true and floor division
+
+== General cases of doing division
+* A div-mod pair
+----
+ total_sec = 7385
+>>> remaining_sec = total_sec % 3600
+>>> min = remaining_sec // 60
+>>> sec = remaining_sec % 60
+>>> min, sec
+(3, 5)
+>>> min , sec = divmod(total_sec , 3600)
+>>> min , sec
+(2, 185)
+>>>
+----
+* The true division
+----
+>>> total_sec = 7385
+>>> hours = total_sec / 3600
+>>> round(hours, 4)
+2.0514
+>>>
+----
+* The rational fraction value.
+----
+READ ABOUT THE OPErators and fill in here Later
+----
