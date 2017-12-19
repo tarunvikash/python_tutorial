@@ -70,3 +70,195 @@ True
 
 * The complex data type is an immutable type that holds a pair of floats, one representing the real part and the other the imaginary part of a complex number.
 * Literal complex numbers are written with the real and imaginary parts joined by a + or - sign, and with the imaginary part followed by a j.* Here are some examples: 3.5+2j, 0.5j, 4+0j, -1-3.7j. Notice that if the real part is 0, we can omit it entirely.
+
+== Strings
+* Strings are represented by the immutable str data type which holds a sequence of Unicode characters.
+* The str data type can be called as a function to create string objects—with no arguments it returns an empty string, with a non-string argument it returns the string form of the argument, and with a string argument it returns a copy of the string.
+* string literals are created using quotes, and that we are free to use single or double quotes providing we use the same at both ends
+* In addition, we can use a triple quoted string—this is Python-speak for a string that begins and ends with three quote characters (either three single quotes or three double quotes).
+
+=== Comparing strings
+* Strings support the usual comparison operators <, <=, ==, !=, >, and >=.
+=== Sclicing and Striding Strings
+* The slice operator has three syntaxes (The seq can be any sequence, such as a list, string, or tuple. The start, end, and step values must all be integers ):
+** seq[start]
+** seq[start:end]      
+** seq[start:end:step]
+----
+>>> actor = "han solo"
+>>> actor[0]
+'h'
+>>> actor[-1]
+'o'
+>>> actor[0:-1]
+'han sol'           #includes start, excudes last
+>>> actor[2:4]
+'n '
+>>>
+>>> actor[0:-1:2]   #step of 2
+'hnsl'
+>>>
+----
+* As strings are sequences they are “sized” objects, and therefore we can call len() with a string as the argument. 
+----
+>>> len(actor)
+8
+>>>
+----
+
+== String functions
+|===
+capitalize
+
+Capitalizes first letter of string
+2 	centerwidth,fillchar
+
+Returns a space-padded string with the original string centered to a total of width columns.
+3 	countstr,beg=0,end=len(string
+)
+
+Counts how many times str occurs in string or in a substring of string if starting index beg and ending index end are given.
+4 	decodeencoding=′UTF−8′,errors=′strict′
+
+Decodes the string using the codec registered for encoding. encoding defaults to the default string encoding.
+5 	encodeencoding=′UTF−8′,errors=′strict′
+
+Returns encoded string version of string; on error, default is to raise a ValueError unless errors is given with 'ignore' or 'replace'.
+6 	endswithsuffix,beg=0,end=len(string
+)
+
+Determines if string or a substring of string ifstartingindexbegandendingindexendaregiven
+
+ends with suffix; returns true if so and false otherwise.
+7 	expandtabstabsize=8
+
+Expands tabs in string to multiple spaces; defaults to 8 spaces per tab if tabsize not provided.
+8 	findstr,beg=0end=len(string
+)
+
+Determine if str occurs in string or in a substring of string if starting index beg and ending index end are given returns index if found and -1 otherwise.
+9 	indexstr,beg=0,end=len(string
+)
+
+Same as find
+
+, but raises an exception if str not found.
+10 	isalnum
+
+Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise.
+11 	isalpha
+
+Returns true if string has at least 1 character and all characters are alphabetic and false otherwise.
+12 	isdigit
+
+Returns true if string contains only digits and false otherwise.
+13 	islower
+
+Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise.
+14 	isnumeric
+
+Returns true if a unicode string contains only numeric characters and false otherwise.
+15 	isspace
+
+Returns true if string contains only whitespace characters and false otherwise.
+16 	istitle
+
+Returns true if string is properly "titlecased" and false otherwise.
+17 	isupper
+
+Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise.
+18 	joinseq
+
+Merges concatenates
+
+the string representations of elements in sequence seq into a string, with separator string.
+19 	lenstring
+
+Returns the length of the string
+20 	ljustwidth[,fillchar]
+
+Returns a space-padded string with the original string left-justified to a total of width columns.
+21 	lower
+
+Converts all uppercase letters in string to lowercase.
+22 	lstrip
+
+Removes all leading whitespace in string.
+23 	maketrans
+
+Returns a translation table to be used in translate function.
+24 	maxstr
+
+Returns the max alphabetical character from the string str.
+25 	minstr
+
+Returns the min alphabetical character from the string str.
+26 	replaceold,new[,max]
+
+Replaces all occurrences of old in string with new or at most max occurrences if max given.
+27 	rfindstr,beg=0,end=len(string
+)
+
+Same as find
+
+, but search backwards in string.
+28 	rindexstr,beg=0,end=len(string
+)
+
+Same as index
+
+, but search backwards in string.
+29 	rjustwidth,[,fillchar]
+
+Returns a space-padded string with the original string right-justified to a total of width columns.
+30 	rstrip
+
+Removes all trailing whitespace of string.
+31 	splitstr="",num=string.count(str
+)
+
+Splits string according to delimiter str spaceifnotprovided
+
+and returns list of substrings; split into at most num substrings if given.
+32 	splitlinesnum=string.count(′\n′
+)
+
+Splits string at all ornum
+
+NEWLINEs and returns a list of each line with NEWLINEs removed.
+33 	startswithstr,beg=0,end=len(string
+)
+
+Determines if string or a substring of string ifstartingindexbegandendingindexendaregiven
+
+starts with substring str; returns true if so and false otherwise.
+34 	strip[chars]
+
+Performs both lstrip
+and rstrip
+
+on string.
+35 	swapcase
+
+Inverts case for all letters in string.
+36 	title
+
+Returns "titlecased" version of string, that is, all words begin with uppercase and the rest are lowercase.
+37 	translatetable,deletechars=""
+
+Translates string according to translation table str256chars
+
+, removing those in the del string.
+38 	upper
+
+Converts lowercase letters in string to uppercase.
+39 	zfill width
+
+Returns original string leftpadded with zeros to a total of width characters; intended for numbers, zfill
+retains any sign given lessonezero
+
+.
+40 	isdecimal
+
+Returns true if a unicode string contains only decimal characters and false otherwise.
+|===
