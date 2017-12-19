@@ -1,0 +1,49 @@
+= Re-write an immutable string
+
+* Example: (with error)
+----
+>>> from fractions import Fraction
+>>> title = "Write into immutable string"
+>>> title[8] = "st"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>>
+----
+
+== Slicing a string
+----
+>>> discard , _ ,after_into = title.partition('into')
+>>> discard
+'Write '
+>>> after_into
+' immutable string'
+>>>
+----
+
+== Replacing
+----
+>>> title_under = title.replace('', '_')
+>>> title_under
+'_W_r_i_t_e_ _i_n_t_o_ _i_m_m_u_t_a_b_l_e_ _s_t_r_i_n_g_'
+>>>
+----
+
+== Slice Notation
+* Decomposing a string
+* A slice has two parts (start and end)
+* It is segregated by colon
+* Includes the starting index
+* String indices always start with 0 as the first item
+* It never includes the ending Index.
+
+== Slice type
+* title[colon_position]:    # single item ":"
+* title[:colon_position]:   # slice with start omitted
+* title[colon_position+1:]  # slice with end omitted
+* title[:]:                 # entire string
+
+== indices that work from right side
+* title[-1]:                # last character
+* title[-2]:                # second character
+* title[-6:]:               # sixth to last
