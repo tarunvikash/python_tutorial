@@ -1,0 +1,36 @@
+= Numbers, Strings and variables
+
+== Creating a name
+* Should be descriptive (Not like x)
+* Must refer to an actual thing
+* Separate the problem domain from solutions domain
+* Name should begin with Letters
+* Create longer name
+* Last part of the name should be a very broad summary of things
+* put narrower & specialized prefixes
+
+== Category of name
+* Class Name
+** Summarizes objects
+** use capitalized camelCase
+* Object
+** use snake case (all lower case with lots of _ )
+* Script and module file
+** use letters
+** (_) Characters
+** End with .py
+----
+>>> circumference_diameter_ratio = 355/10
+>>> target_color_name = 'Firebrick'
+>>> target_color_rgb = target_color_name = 'firebrik'
+>>> id(target_color_name) == id(target_color_rgb)
+True
+>>>
+----
+
+== Approach to creating names
+* More specific qualifier => more specific category
+* Example : .com => .google => mail
+** mail.google.com
+** service@packtpub.com
+
