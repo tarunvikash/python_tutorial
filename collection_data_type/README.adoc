@@ -33,3 +33,42 @@ Hello!
 * Tuple provide just 2 functions:
 ** t.count(x) => Returns how many time the object x has occured in the tuple t.
 ** t.index(x) => Returns the left most occurance of the object x in the tuple t.
+* Additionally tuples can be used with the following operators:
+** + (concatination)
+** * (replication)
+** [] (slicing)
+** *in* and *not in* (to check for membership)
+** (<, <=, ==, !=, >=, >)
+----
+>>> hair = 'yellow','brown','grey','pink'    
+>>> hair1 = ('yellow','brown','grey','pink') #  Same thing as above
+>>> hair[-2:] , 'brown' , hair[:3]
+(('grey', 'pink'), 'brown', ('yellow', 'brown', 'grey'))
+>>> type(hair)
+<class 'tuple'>
+>>> hair[-2:]+('brown',)+hair[:3]
+('grey', 'pink', 'brown', 'yellow', 'brown', 'grey')
+>>>
+----
+* Nesting Tuples:
+----
+>>> length = ('ww','ll', ('gg','xyx') ,'kkk')
+>>> length[3][1]
+'k'
+>>> length[2][1][1]
+'y'
+>>>
+----
+* For in loop
+----
+>>> m = (('a','b'),(1,2),('t','p'))
+>>> for x,y in m:
+...     print(x,y)
+...
+a b
+1 2
+t p
+>>>
+----
+
+=== Named Tuples
