@@ -72,3 +72,51 @@ t p
 ----
 
 === Named Tuples
+
+* A named tuple is the same as plain tuples.
+* What it adds to is the ability to refer to tuple items by name as well as indexes.
+* *The collections modules provide namedtuple() function. this function is used to create custom tuple data type.*
+
+
+=== Lists
+* A list is an ordered sequence of zero or more objects references.
+* Lists are mutable
+* The list data_type can be called inside the function list().
+** With no argument it returns an empty list.
+** With the argument *list* it returns a shallow copy of the argument.
+** With any other arguments it attempts to convert the given object to a list.
+
+* Lists can be nested, iterated over, and sliced, the same as tuples. 
+* Lists support membership testing with in and not in.
+* concatenation with +, extending with += (i.e., the appending of all the items in the right-hand operand), and replication with * and *=. Lists can also be used with the built-in len() function, and Deleting Items Using the del Statement.
+----
+>>> list1 = [1,34,'gog','kkl','45ere']
+>>> l[0]==l[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'l' is not defined
+>>> list1[0]==list1[3]
+False
+>>> list1[0]=list1[3]
+>>> listt1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'listt1' is not defined
+>>> list1
+['kkl', 34, 'gog', 'kkl', '45ere']
+>>> l =list1
+>>> l.append(3)
+>>> l
+['kkl', 34, 'gog', 'kkl', '45ere', 3]
+>>> l.count(3)
+1
+>>> m = l
+>>> l.extend(m)
+>>> l
+['kkl', 34, 'gog', 'kkl', '45ere', 3, 'kkl', 34, 'gog', 'kkl', '45ere', 3]
+>>> l+=m
+>>> l
+['kkl', 34, 'gog', 'kkl', '45ere', 3, 'kkl', 34, 'gog', 'kkl', '45ere', 3, 'kkl', 34, 'gog', 'kkl', '45ere', 3, 'kkl', 34, 'gog', 'kkl', '45ere', 3]
+>>>
+----
+
