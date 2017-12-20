@@ -1,0 +1,35 @@
+= Collection data type
+
+== Sequence datatypes
+* A sequence datatypr is the one that supports (in) function, slice ([]) function, the size function(len()) and is iterable.
+* Python supports five types of sequences:
+** bytearray
+** byte
+** list
+** str
+** Tuples
+
+=== Tuples
+* Tuples are ordered sequence of zero or more objects references.
+* They follow the same slicing and striding principle.
+* Like strings tuples are immutable.
+* If you want to modify the contents of a tuple you need to first convert the tuple to list using list() function, and then work on the resulting list.
+* The tuple data type can be called using the *tuple()* function.
+** With no arguments it returns an empty tuple
+** With *tuple* argument it returns the shallow copy of the argument
+** With other arguments it attempts to convert the given object to a tuple
+* The tuple() doesnot accepts more than one arguments.
+* An empty tuple can be created using an empty parenthesis ().
+* To pass a tuple to a function enclose it within parenthesis to avoid and syntactical error.
+----
+>>> def fun(hello):
+...     print("Hello!")
+...
+>>> fun((1,2,3))
+Hello!
+>>>
+----
+* Tuple index starts from 0 and -1(from right)
+* Tuple provide just 2 functions:
+** t.count(x) => Returns how many time the object x has occured in the tuple t.
+** t.index(x) => Returns the left most occurance of the object x in the tuple t.
